@@ -1,4 +1,5 @@
 import orjson
+import decimal
 
 from ninja.renderers import BaseRenderer
 from ninja import NinjaAPI
@@ -11,8 +12,12 @@ class ORJSONRenderer(BaseRenderer):
     media_type = "application/json"
 
     def render(self, request, data, *, response_status):
-        return orjson.dumps(data)
+        def default(obj):
+            if isinstance(obj, decimal.Decimal):
+                return float(obj)
+            raise TypeError
 
+        return orjson.dumps(data, default=default)
 
 
 api = NinjaAPI(renderer=ORJSONRenderer())
