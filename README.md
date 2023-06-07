@@ -1,7 +1,7 @@
 # ASM Backend
 
 ### America Secondhand Market Backend
-### python 3.10.11, django 4.2.1, wagtail 5.0.1
+### python 3.10.11, [django](https://www.djangoproject.com/) 4.2.1, [wagtail](https://wagtail.org/) 5.0.1
 
 ---
 
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ---
 ### DB setting 
 
-if you are a bigginer, it's better to use [SQLite](https://www.sqlite.org/index.html) instead of [MySQL](https://www.mysql.com/). Edit [this file](!asm_backend/settings/base.py) like this.
+if you are a biginner, it's better to use [SQLite](https://www.sqlite.org/index.html) instead of [MySQL](https://www.mysql.com/). Edit [this file](!asm_backend/settings/base.py) like this.
 
 ### SQLite (Default Django DB)
 ```
