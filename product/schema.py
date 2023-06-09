@@ -23,6 +23,7 @@ class ProductSchema(ModelSchema):
             'title',
             'description',
             'price',
+            'negotiable',
             'category',
             'seller_info',
             'location',
